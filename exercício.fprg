@@ -4,24 +4,27 @@
         <attribute name="name" value="S1_R4-AT2_LOPAL (01)"/>
         <attribute name="authors" value="I1HSA"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-04-13 11:28:13 "/>
+        <attribute name="saved" value="2026-04-13 11:33:31 "/>
         <attribute name="created" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjE2OjI2ICI7MjQyMA=="/>
         <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA5OjU3OjM0ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6Mjg6MjMgIjtTMV9SNC1BVDJfTE9QQUwgKDAyKS5mcHJnOzY4MzU="/>
         <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjI4OjA4ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6NDA6MDQgIjtTMV9SNC1BVDJfTE9QQUwgKDAzKS5mcHJnOzY4MjE="/>
-        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjI4OjEzICI7MzsyNTIz"/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjMzOjI1ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6NDQ6MTIgIjtTMV9SNC1BVDJfTE9QQUwgKDA0KS5mcHJnOzY4MjA="/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjMzOjMxICI7NDsyNTIw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="altura" type="Real" array="False" size=""/>
-            <output expression="&quot;Qual a sua altura? (em metros)&quot;" newline="True"/>
-            <input variable="altura"/>
-            <if expression="altura &gt;= 1.40">
+            <declare name="senha, conf" type="String" array="False" size=""/>
+            <output expression="&quot;Cadastre sua senha: &quot;" newline="True"/>
+            <input variable="senha"/>
+            <output expression="&quot;Confirme a sua senha: &quot;" newline="True"/>
+            <input variable="conf"/>
+            <if expression="senha == conf">
                 <then>
-                    <output expression="&quot;Voc&#234; pode entrar no brinquedo.&quot;" newline="True"/>
+                    <output expression="&quot;Acesso Liberado&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Altura insuficiente.&quot;" newline="True"/>
+                    <output expression="&quot;Acesso Negado&quot;" newline="True"/>
                 </else>
             </if>
         </body>

@@ -1,13 +1,15 @@
-let altura;
-altura = Number(prompt("Insira a sua altura em metros: "));
+let senha;
+senha = prompt("Cadastre a sua senha: ");
+let conf;
+conf = prompt("Confirme a sua senha: ");
 
-if (altura >= 1.40) {
+if (senha == conf) {
 
-alert("Você pode entrar no brinquedo.")
+    alert("Acesso Liberado")
 
 }
 else {
 
-alert("Altura insuficiente.")
+    alert("Senha Incorreta")
 
 };
