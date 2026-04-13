@@ -4,22 +4,24 @@
         <attribute name="name" value="S1_R4-AT2_LOPAL (01)"/>
         <attribute name="authors" value="I1HSA"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-04-13 08:28:18 "/>
+        <attribute name="saved" value="2026-04-13 11:28:13 "/>
         <attribute name="created" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjE2OjI2ICI7MjQyMA=="/>
-        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjI4OjE4ICI7MTsyNTMy"/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA5OjU3OjM0ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6Mjg6MjMgIjtTMV9SNC1BVDJfTE9QQUwgKDAyKS5mcHJnOzY4MzU="/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjI4OjA4ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6NDA6MDQgIjtTMV9SNC1BVDJfTE9QQUwgKDAzKS5mcHJnOzY4MjE="/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjExOjI4OjEzICI7MzsyNTIz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="num" type="Integer" array="False" size=""/>
-            <output expression="&quot;Digite um n&#250;mero inteiro:&quot;" newline="True"/>
-            <input variable="num"/>
-            <if expression="num % 2 = 0">
+            <declare name="altura" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual a sua altura? (em metros)&quot;" newline="True"/>
+            <input variable="altura"/>
+            <if expression="altura &gt;= 1.40">
                 <then>
-                    <output expression="num &amp; &quot; &#233; um n&#250;mero par.&quot;" newline="True"/>
+                    <output expression="&quot;Voc&#234; pode entrar no brinquedo.&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="num &amp; &quot; &#233; um n&#250;mero &#237;mpar.&quot;" newline="True"/>
+                    <output expression="&quot;Altura insuficiente.&quot;" newline="True"/>
                 </else>
             </if>
         </body>

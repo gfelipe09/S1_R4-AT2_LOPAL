@@ -1,21 +1,13 @@
-let num;
-num = Number(prompt("Digite um número qualquer: "));
+let altura;
+altura = Number(prompt("Insira a sua altura em metros: "));
 
-if (isNaN(num)) {
+if (altura >= 1.40) {
 
-    alert("Você não digitou um número!")
+alert("Você pode entrar no brinquedo.")
 
 }
 else {
 
-    if (num % 2 == 0) {
+alert("Altura insuficiente.")
 
-        alert(num + " é um número par.")
-
-    }
-    else {
-
-        alert(num + " é um número ímpar.")
-
-    }
 };
