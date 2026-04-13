@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="S1_R4-AT2_LOPAL (01)"/>
+        <attribute name="authors" value="I1HSA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-13 08:28:18 "/>
+        <attribute name="created" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjE2OjI2ICI7MjQyMA=="/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjI4OjE4ICI7MTsyNTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero inteiro:&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num % 2 = 0">
+                <then>
+                    <output expression="num &amp; &quot; &#233; um n&#250;mero par.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="num &amp; &quot; &#233; um n&#250;mero &#237;mpar.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
