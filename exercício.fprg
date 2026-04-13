@@ -4,22 +4,56 @@
         <attribute name="name" value="S1_R4-AT2_LOPAL (01)"/>
         <attribute name="authors" value="I1HSA"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-04-13 08:28:18 "/>
+        <attribute name="saved" value="2026-04-13 09:57:52 "/>
         <attribute name="created" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjE2OjI2ICI7MjQyMA=="/>
-        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA4OjI4OjE4ICI7MTsyNTMy"/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA5OjU3OjM0ICI7MTtJMUhTQTtFQ0ZQNTEyTjEyNjI4Mjk7MjAyNi0wNC0xMzsiMDg6Mjg6MjMgIjtTMV9SNC1BVDJfTE9QQUwgKDAyKS5mcHJnOzY4MzU="/>
+        <attribute name="edited" value="STFIU0E7RUNGUDUxMk4xMjYyODI5OzIwMjYtMDQtMTM7IjA5OjU3OjUyICI7MjsyNTM0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="num" type="Integer" array="False" size=""/>
-            <output expression="&quot;Digite um n&#250;mero inteiro:&quot;" newline="True"/>
-            <input variable="num"/>
-            <if expression="num % 2 = 0">
+            <declare name="valor" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o valor da sua compra: &quot;" newline="True"/>
+            <input variable="valor"/>
+            <if expression="valor &gt;= 150">
                 <then>
-                    <output expression="num &amp; &quot; &#233; um n&#250;mero par.&quot;" newline="True"/>
+                    <declare name="vCdesc, desc" type="Real" array="False" size=""/>
+                    <assign variable="vCdesc" expression="valor * 0.98"/>
+                    <assign variable="desc" expression="valor * 0.02"/>
+                    <output expression="&quot;Parab&#233;ns! Voc&#234; recebeu um desconto de &quot; &amp; desc &amp; &quot; reais.&quot;" newline="True"/>
+                    <output expression="&quot;O valor do produto com desconto &#233; igual a &quot; &amp; vCdesc &amp; &quot; reais,&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="num &amp; &quot; &#233; um n&#250;mero &#237;mpar.&quot;" newline="True"/>
+                    <if expression="valor = 1">
+                        <then>
+                            <declare name="cashback" type="Real" array="False" size=""/>
+                            <assign variable="cashback" expression="valor * 0.02"/>
+                            <if expression="cashback == 1">
+                                <then>
+                                    <output expression="&quot;Parab&#233;ns! Voc&#234; recebeu um cashback de &quot; &amp; cashback &amp; &quot; real.&quot;" newline="True"/>
+                                    <output expression="&quot;O valor do produto &#233; igual a &quot; &amp; valor &amp; &quot; reais, com isso voc&#234; recebeu um cashbak de &quot; &amp; cashback &amp; &quot; real.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Parab&#233;ns! Voc&#234; recebeu um cashback de &quot; &amp; cashback &amp; &quot; reais.&quot;" newline="True"/>
+                                    <output expression="&quot;O valor do produto &#233; igual a &quot; &amp; valor &amp; &quot; real, com isso voc&#234; recebeu um cashbak de &quot; &amp; cashback &amp; &quot; reais.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <declare name="cashback" type="Real" array="False" size=""/>
+                            <assign variable="cashback" expression="valor * 0.02"/>
+                            <if expression="cashback == 1">
+                                <then>
+                                    <output expression="&quot;Parab&#233;ns! Voc&#234; recebeu um cashback de &quot; &amp; cashback &amp; &quot; real.&quot;" newline="True"/>
+                                    <output expression="&quot;O valor do produto &#233; igual a &quot; &amp; valor &amp; &quot; reais, com isso voc&#234; recebeu um cashbak de &quot; &amp; cashback &amp; &quot; real.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Parab&#233;ns! Voc&#234; recebeu um cashback de &quot; &amp; cashback &amp; &quot; reais.&quot;" newline="True"/>
+                                    <output expression="&quot;O valor do produto &#233; igual a &quot; &amp; valor &amp; &quot; reais, com isso voc&#234; recebeu um cashbak de &quot; &amp; cashback &amp; &quot; reais.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
                 </else>
             </if>
         </body>
